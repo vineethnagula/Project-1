@@ -1,0 +1,13 @@
+function login() {
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+    const error = document.getElementById("error");
+
+    if (email === "admin@example.com" && password === "Admin@123") {
+        alert("Login Successful 🎉");
+        error.textContent = "";
+    } else {
+        error.textContent = "Invalid email or password";
+    }
+}
+
