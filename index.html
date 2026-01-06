@@ -2,36 +2,56 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Modern Login</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Modern UI</title>
+
+    <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="login-box">
-    <h2>Welcome Back</h2>
+    <main class="login-box">
+        <h2>Welcome Back</h2>
 
-    <div class="input-group">
-        <label>Email</label>
-        <input type="email" id="email" placeholder="you@example.com">
-    </div>
+        <form onsubmit="login(); return false;">
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input 
+                    type="email" 
+                    id="email" 
+                    placeholder="you@example.com"
+                    required
+                >
+            </div>
 
-    <div class="input-group">
-        <label>Password</label>
-        <input type="password" id="password" placeholder="••••••••">
-    </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input 
+                    type="password" 
+                    id="password" 
+                    placeholder="••••••••"
+                    required
+                >
+            </div>
 
-    <button onclick="login()">Login</button>
+            <button type="submit">Login</button>
 
-    <p class="error" id="error"></p>
+            <p class="error" id="error"></p>
+        </form>
 
-    <div class="extra">
-        <a href="#">Forgot Password?</a> |
-        <a href="#">Create Account</a>
-    </div>
-</div>
+        <div class="extra">
+            <a href="#">Forgot Password?</a>
+            <span>|</span>
+            <a href="#">Create Account</a>
+        </div>
+    </main>
 
-<script src="script.js"></script>
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
 </body>
 </html>
 
